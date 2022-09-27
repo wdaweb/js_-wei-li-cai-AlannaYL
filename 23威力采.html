@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 我的解法       
+        const getwili = (x) => { return Math.round(Math.random() * (x - 1) + 1) }
+
+        const wiliA = []
+        while (wiliA.length < 6) {
+            const a = getwili(38)
+            if (!wiliA.includes[a])
+                wiliA.push(a)
+        }
+        const wiliB = getwili(8)
+        document.write('A區:' + wiliA.join(',') + '<br>' + 'B區:' + wiliB)
+
+        // 老師解法
+
+        const rand = (min, max) => {
+            return Math.round(Math.random() * (max - min) + min)
+        }
+
+
+        const grouA = []
+
+        // for方法
+        // 取六顆球
+        for (let i = 0; i < 6; i++) {
+            // 每次隨機一個數字
+            const num = rand(1, 38)
+            if (groupA.includes(num)) {
+                // 如果重複，再跑一次
+                i--
+            } else {
+                groupA.push(num)
+                // 沒有重複放陣列
+            }
+        }
+
+
+        // while方法 取滿6個數字為止
+        while (gropuA.length < 6) {
+            // 每次隨機一個數字
+            const num = rand(1, 38)
+            // 不重複就放進一個陣列
+            if (!gropuA.includes(num)) {
+                gropuA.push[num]
+            }
+        }
+
+        // 建立一個有38個數字的陣列
+        const numbers = []
+        for (let i = 0; i < 6; i++) {
+            numbers.push(i)
+        }
+        // 取六個數字
+        for (let i = 0; i < 6; i++) {
+            // 每次隨機一個陣列索因
+            const index = rand(0, numbers.length - 1)
+            // 將取道索引對應值放入陣列
+            groupA.push(numbers[index])
+            // 將取到的索引從數字陣列移除
+            numbers.splice(index, 1)
+        }
+    </script>
+</body>
+
+</html>
